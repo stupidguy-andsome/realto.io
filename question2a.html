@@ -12,14 +12,17 @@
 
 
         body {
-            background-color: rgb(253, 202, 101);
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;  /* Align the content to the top */
-            padding-top: 40px;  /* Add some padding from the top */
-            height: 100vh;
+            background-image: url('images/Untitled design.jpg'); /* Set the background image */
+            background-size: cover;                        /* Ensure the image covers the whole viewport */
+            background-position: center;                    /* Center the background image */
+            background-attachment: fixed;                   /* Fix the background so it doesn't scroll */
+            font-family: Arial, sans-serif;                  /* Font family */
+            color: #ffffff;                                /* Text color */
+            display: flex;                                  /* Flexbox for centering */
+            justify-content: center;                        /* Horizontally center content */
+            align-items: flex-start;                        /* Align content at the top */
+            padding-top: 40px;                              /* Space from the top of the page */
+            height: 100vh;                                  /* Full viewport height */
             position: relative;
             margin: 0;
         }
@@ -39,13 +42,14 @@
 
         .question-container {
             padding: 20px;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.5);  /* Transparent black background for better readability */
             border: none;
             box-shadow: none;
             display: inline-block;
             width: 100%;
-            max-width: 600px;
-            text-align: center;  /* Center the content inside */
+            max-width: 600px; /* You can adjust the max width here */
+            text-align: center;  /* Ensures everything inside is centered */
+
         }
 
 
