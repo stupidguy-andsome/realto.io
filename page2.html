@@ -14,16 +14,20 @@
 
         /* Set up the background color and layout for centering the content */
         body {
-            background-color: rgb(253, 202, 101);  /* Background color */
-            font-family: Arial, sans-serif;         /* Font family */
-            color: #ffffff;                         /* Text color */
-            display: flex;                          /* Flexbox for centering */
-            justify-content: center;                /* Horizontally center content */
-            align-items: flex-start;                /* Align content at the top */
-            padding-top: 40px;                      /* Space from the top of the page */
-            height: 100vh;                          /* Full viewport height */
+            background-image: url('images/Untitled design.jpg'); /* Set the background image */
+            background-size: cover;                        /* Ensure the image covers the whole viewport */
+            background-position: center;                    /* Center the background image */
+            background-attachment: fixed;                   /* Fix the background so it doesn't scroll */
+            font-family: Arial, sans-serif;                  /* Font family */
+            color: #ffffff;                                /* Text color */
+            display: flex;                                  /* Flexbox for centering */
+            justify-content: center;                        /* Horizontally center content */
+            align-items: flex-start;                        /* Align content at the top */
+            padding-top: 40px;                              /* Space from the top of the page */
+            height: 100vh;                                  /* Full viewport height */
             position: relative;
             margin: 0;
+
         }
 
 
@@ -43,7 +47,7 @@
         /* Question container, centers the content and limits its max width */
         .question-container {
             padding: 20px;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.5);  /* Transparent black background for better readability */
             border: none;
             box-shadow: none;
             display: inline-block;
