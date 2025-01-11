@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire - Question 3</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(253, 202, 101);
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;  /* Align content to the top */
+            padding-top: 40px;  /* Add padding from the top */
+            height: 100vh;
+            position: relative;
+            margin: 0;
+        }
+
+        .top-bar {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #f32121;
+            color: white;
+            padding: 5px 15px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .question-container {
+            padding: 20px;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;  /* Center the content inside */
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 40px;  /* Increase font size for the question */
+            margin-bottom: 20px;  /* Space between question and options */
+            text-align: center;  /* Ensures question is centered */
+        }
+
+        p {
+            font-size: 24px;  /* Increase font size for instruction */
+            margin-bottom: 20px;  /* Adds space below the instruction */
+            text-align: center;  /* Centers the instruction */
+        }
+
+        .choice {
+            font-size: 20px;  /* Increase font size for the options */
+            margin-bottom: 20px;  /* Adds space between options */
+            text-align: left;  /* Align choices to the left */
+            padding-left: 30px;  /* Indentation for the choices */
+        }
+
+        .button {
+            background-color: transparent;
+            border: 2px solid transparent;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            position: absolute;
+            bottom: 10%;
+        }
+
+        .prev {
+            left: 10%;
+        }
+
+        .next {
+            right: 10%;
+        }
+
+        .button:hover {
+            color: rgb(255, 255, 255);
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Question 3 of 5</div>
+
+    <div class="question-container">
+        <h1>Question 3: What kind of home are you looking for?</h1>
+        <p>Select the best option:</p>
+        
+        <div class="choice">
+            <input type="radio" id="optionA" name="question3" value="a" onclick="goToNextQuestion('a')">
+            <label for="optionA">a. House</label>
+        </div>
+
+        <div class="choice">
+            <input type="radio" id="optionB" name="question3" value="b" onclick="goToNextQuestion('b')">
+            <label for="optionB">b. Apartment</label>
+        </div>
+
+        <div class="choice">
+            <input type="radio" id="optionC" name="question3" value="c" onclick="goToNextQuestion('c')">
+            <label for="optionC">c. Shelter</label>
+        </div>
+    </div>
+
+    <a href="question2a.html" class="button prev">← Prev</a>
+    <a href="question4.html" class="button next">Next →</a>
+
+    <script>
+        function goToNextQuestion(selectedOption) {
+            if (selectedOption === 'a') {
+                window.location.href = 'question4.html';
+            } else if (selectedOption === 'b') {
+                window.location.href = 'question4.html';
+            } else if (selectedOption === 'c') {
+                window.location.href = 'question4.html';
+            }
+        }
+    </script>
+</body>
+</html>

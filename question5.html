@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire - Question 5</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(253, 202, 101);
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 40px;
+            height: 100vh;
+            position: relative;
+            margin: 0;
+        }
+
+        .top-bar {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #f32121;
+            color: white;
+            padding: 5px 15px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .question-container {
+            padding: 20px;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .choice {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .button {
+            background-color: transparent;
+            border: 2px solid transparent;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            position: absolute;
+            bottom: 10%;
+        }
+
+        .prev {
+            left: 10%;
+        }
+
+        .next {
+            right: 10%;
+        }
+
+        .button:hover {
+            color: rgb(255, 255, 255);
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Question 5 of 5</div>
+
+    <div class="question-container">
+        <h1>Question 5: What are your necessities?</h1>
+        <p>Select the best options:</p>
+        
+        <div class="choice">
+            <input type="checkbox" id="optionA" name="question5" value="Food Banks" onclick="saveAnswer()">
+            <label for="optionA">a. Food Banks</label>
+        </div>
+
+        <div class="choice">
+            <input type="checkbox" id="optionB" name="question5" value="Disability Centers" onclick="saveAnswer()">
+            <label for="optionB">b. Disability Centers</label>
+        </div>
+
+        <div class="choice">
+            <input type="checkbox" id="optionC" name="question5" value="Schools" onclick="saveAnswer()">
+            <label for="optionC">c. Schools</label>
+        </div>
+
+        <div class="choice">
+            <input type="checkbox" id="optionD" name="question5" value="Public Transportation" onclick="saveAnswer()">
+            <label for="optionD">d. Public Transportation</label>
+        </div>
+
+        <div class="choice">
+            <input type="checkbox" id="optionE" name="question5" value="Day Care" onclick="saveAnswer()">
+            <label for="optionE">e. Day Care</label>
+        </div>
+
+        <div class="choice">
+            <input type="checkbox" id="optionF" name="question5" value="Hospitals" onclick="saveAnswer()">
+            <label for="optionF">f. Hospitals</label>
+        </div>
+    </div>
+
+    <a href="question4.html" class="button prev">← Prev</a>
+    <a href="page3.html" class="button next">Next →</a>
+
+    <script>
+        function saveAnswer() {
+            const selectedOptions = [];
+            document.querySelectorAll('input[name="question5"]:checked').forEach((checkbox) => {
+                selectedOptions.push(checkbox.value);
+            });
+            localStorage.setItem('question5', selectedOptions.join(', '));
+        }
+    </script>
+</body>
+</html>
