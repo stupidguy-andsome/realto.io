@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3 - Overview</title>
+    <style>
+        /* CSS to center all content in the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(253, 202, 101);
+            color: #ffffff;
+            display: flex;
+            justify-content: center; /* Horizontally center */
+            height: 100vh; /* Take full viewport height */
+            margin: 0; /* Remove default body margin */
+            text-align: center; /* Center the text */
+            position: relative; /* So we can position buttons relative to the body */
+        }
+
+        h1 {
+            color: #ffffff; /* Black color for heading */
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .button {
+            background-color: transparent;
+            border: 2px solid transparent; /* Invisible border */
+            color: #ffffff; /* Text color */
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from links */
+            font-weight: bold;
+            position: absolute; /* Position buttons absolutely within the body */
+        }
+
+        /* Position the "Prev" button at the bottom left */
+        .prev {
+            left: 10%; /* Position near left */
+            bottom: 10%; /* Position near bottom */
+        }
+
+        /* Position the "Next" button at the bottom right */
+        .next {
+            right: 10%; /* Position near right */
+            bottom: 10%; /* Position near bottom */
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            color: rgb(255, 255, 255); /* Change text color to white on hover */
+            background-color: #000000; /* Change background to black */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Overview</h1>
+        
+        <p>1. What kind of home are you looking for? <strong id="home"></strong></p>
+        <p>2. How do you want to purchase your home? <strong id="purchase"></strong></p>
+        <p>3. What are your necessities? <strong id="necessities"></strong></p>
+        
+        <h2>City Rankings</h2>
+        <p>Home Value Index Raw: <br><strong id="homeValueIndex"></strong></p>
+        <p>Cost of Living Index: <br><strong id="costOfLivingIndex"></strong></p>
+        <p>Quality of Life Index: <br><strong id="qualityOfLifeIndex"></strong></p>
+    </div>
+
+    <!-- The "Prev" button (left arrow) -->
+    <a href="question5.html" class="button prev">← Prev</a>
+
+    <!-- The "Next" button (right arrow) -->
+    <a href="page4.html" class="button next">Next →</a>
+
+    <script>
+        // Retrieve stored answers from localStorage and display them
+        document.getElementById('home').innerText = localStorage.getItem('question3') || 'Not answered';
+        document.getElementById('purchase').innerText = localStorage.getItem('question4') || 'Not answered';
+        document.getElementById('necessities').innerText = localStorage.getItem('question5') || 'Not answered';
+        
+        // City rankings (Example data)
+        const homeValueIndex = "1. San Jose, 2. Sacramento, 3. Riverside, 4. San Francisco, 5. Los Angeles, 6. San Diego";
+        const costOfLivingIndex = "1. San Diego, 2. Sacramento, 3. Riverside, 4. Los Angeles, 5. San Francisco, 6. San Jose";
+        const qualityOfLifeIndex = "1. San Jose, 2. Los Angeles, 3. San Diego, 4. Riverside, 5. San Francisco, 6. Sacramento";
+
+        // Store rankings in localStorage for later use (optional if you want to persist)
+        localStorage.setItem('homeValueIndex', homeValueIndex);
+        localStorage.setItem('costOfLivingIndex', costOfLivingIndex);
+        localStorage.setItem('qualityOfLifeIndex', qualityOfLifeIndex);
+
+        // Retrieve rankings and display them
+        document.getElementById('homeValueIndex').innerText = localStorage.getItem('homeValueIndex') || 'Not available';
+        document.getElementById('costOfLivingIndex').innerText = localStorage.getItem('costOfLivingIndex') || 'Not available';
+        document.getElementById('qualityOfLifeIndex').innerText = localStorage.getItem('qualityOfLifeIndex') || 'Not available';
+    </script>
+</body>
+</html>
